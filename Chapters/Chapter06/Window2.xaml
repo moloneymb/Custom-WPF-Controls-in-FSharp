@@ -1,0 +1,58 @@
+﻿<Window x:Class="Chapters.Chapter06.Window2"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:DataGrid="clr-namespace:Xceed.Wpf.DataGrid;assembly=Xceed.Wpf.DataGrid"
+		xmlns:System="clr-namespace:System;assembly=mscorlib"
+		xmlns:Chapter_AP="clr-namespace:Chapters.Chapter06"
+		Title="Window2"
+		Height="300"
+		Width="500">
+	<Window.Resources>
+
+		<Chapter_AP:StringCollection x:Key="DataSource" />
+	</Window.Resources>
+	<DockPanel>
+		<StackPanel Orientation="Horizontal"
+					DockPanel.Dock="Bottom">
+			<Button Click="SortClicked">Sort</Button>
+			<Button Click="ResetClicked">Reset</Button>
+			<Button Click="AddClicked">Add</Button>
+			<Button Click="RemoveClicked">Remove</Button>
+		</StackPanel>
+
+		<Grid DockPanel.Dock="Right"
+			  Width="150">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<ListBox x:Name="_addedItems"
+					 Grid.Row="0">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Border Background="LightGreen">
+							<TextBlock Text="{Binding}" />
+						</Border>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+			<ListBox x:Name="_removedItems"
+					 Grid.Row="1">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Border Background="Coral">
+							<TextBlock Text="{Binding}" />
+						</Border>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+
+			</ListBox>
+		</Grid>
+
+		<DataGrid:DataGridControl x:Name="_grid"
+								  ItemsSource="{StaticResource DataSource}"
+								  ItemScrollingBehavior="Immediate"
+								  ScrollViewer.CanContentScroll="False" />
+	</DockPanel>
+</Window>

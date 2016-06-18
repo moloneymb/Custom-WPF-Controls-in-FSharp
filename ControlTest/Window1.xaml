@@ -1,0 +1,10 @@
+﻿<Window x:Class="ControlTest.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chap="clr-namespace:Chapters.Chapter09;assembly=Chapters"
+        Title="Window1" Height="1000" Width="1000">
+    
+    <Grid>
+        <chap:DockSlideTester />
+    </Grid>
+</Window>

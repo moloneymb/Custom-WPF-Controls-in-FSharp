@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Chapters.Chapter02.InkCanvasExample"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+		<ImageBrush x:Key="ToucanBackground"
+					ImageSource="/Resources;component/Shared/toucan.jpg" />
+	</UserControl.Resources>
+	<Grid Background="{StaticResource ToucanBackground}">
+		<InkCanvas x:Name="_tablet"
+				   Background="Transparent" />
+	</Grid>
+</UserControl>

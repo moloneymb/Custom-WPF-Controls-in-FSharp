@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7476A83-887B-4293-A637-C1802C8E3A20}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Resources</RootNamespace>
+    <AssemblyName>Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shared\toucan.jpg">
+    </Resource>
+    <Resource Include="Chapter16\graph_background.png">
+    </Resource>
+    <Resource Include="Chapter12\world.jpg">
+    </Resource>
+    <Resource Include="Chapter11\09.png">
+    </Resource>
+    <Resource Include="Chapter11\08.png">
+    </Resource>
+    <Resource Include="Chapter11\07.png">
+    </Resource>
+    <Resource Include="Chapter11\06.png">
+    </Resource>
+    <Resource Include="Chapter11\05.png">
+    </Resource>
+    <Resource Include="Chapter11\04.png">
+    </Resource>
+    <Resource Include="Chapter11\03.png">
+    </Resource>
+    <Resource Include="Chapter11\02.png">
+    </Resource>
+    <Resource Include="Chapter11\01.png">
+    </Resource>
+    <Resource Include="Chapter10\WindowIcon.png">
+    </Resource>
+    <Resource Include="Chapter10\line6.png">
+    </Resource>
+    <Resource Include="Chapter10\line11.png">
+    </Resource>
+    <Resource Include="Chapter10\circle17.png">
+    </Resource>
+    <Resource Include="Chapter09\wall.jpg">
+    </Resource>
+    <Resource Include="Chapter09\SoftEdgeMask.png">
+    </Resource>
+    <Resource Include="Chapter09\Phoenix.jpg">
+    </Resource>
+    <Resource Include="Chapter09\LunchMenu.jpg">
+    </Resource>
+    <Resource Include="Chapter09\earthmap.jpg">
+    </Resource>
+    <Resource Include="Chapter09\DrinksMenu.jpg">
+    </Resource>
+    <Resource Include="Chapter09\bike_red.jpg">
+    </Resource>
+    <Resource Include="Chapter09\bike_blue.jpg">
+    </Resource>
+    <Resource Include="Chapter09\battery.png">
+    </Resource>
+    <Resource Include="Chapter09\3_wood.png">
+    </Resource>
+    <Resource Include="Chapter09\2_hill.png">
+    </Resource>
+    <Resource Include="Chapter09\1_mountains.png">
+    </Resource>
+    <Resource Include="Chapter09\0_sun.png">
+    </Resource>
+    <Resource Include="Chapter05\sub.png">
+    </Resource>
+    <Resource Include="Chapter05\ship.png">
+    </Resource>
+    <Resource Include="Chapter05\plane.png">
+    </Resource>
+    <Resource Include="Chapter05\InspectBubble.png">
+    </Resource>
+    <Resource Include="Chapter02\player_stop.png">
+    </Resource>
+    <Resource Include="Chapter02\player_start.png">
+    </Resource>
+    <Resource Include="Chapter02\player_play.png">
+    </Resource>
+    <Resource Include="Chapter02\player_pause.png">
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Chapter13\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Chapter02\Bear.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

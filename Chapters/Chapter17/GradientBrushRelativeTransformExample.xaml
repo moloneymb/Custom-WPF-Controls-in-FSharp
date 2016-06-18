@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Chapters.Chapter17.GradientBrushRelativeTransformExample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Storyboard x:Key="ProgressAnimation"
+                    RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="rectangle"
+                                           Storyboard.TargetProperty="(Shape.Fill).(Brush.RelativeTransform).(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00"
+                                      Value="0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:03"
+                                      Value="0.715" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Rectangle x:Name="rectangle"
+                   Stroke="#FFA7A7A7"
+                   RadiusX="20"
+                   RadiusY="20"
+                   VerticalAlignment="Center"
+                   Height="40"
+                   StrokeThickness="2"
+                   HorizontalAlignment="Center"
+                   Width="350">
+            <Rectangle.Fill>
+                <LinearGradientBrush SpreadMethod="Repeat"
+                                     EndPoint="0.939,-0.007"
+                                     StartPoint="0.821,0.49">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TranslateTransform X="0"
+                                            Y="0" />
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFEAEAEA"
+                                  Offset="0" />
+                    <GradientStop Color="#FFFFFFFF"
+                                  Offset="0.522" />
+                    <GradientStop Color="#FFC30000"
+                                  Offset="0.526" />
+                    <GradientStop Color="#FFFF0000"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard x:Name="ProgressAnimation_BeginStoryboard"
+                             Storyboard="{StaticResource ProgressAnimation}" />
+        </EventTrigger>
+    </UserControl.Triggers>
+
+</UserControl>

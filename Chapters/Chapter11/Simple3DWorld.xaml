@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Chapters.Chapter11.Simple3DWorld"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Viewport3D>
+            <Viewport3D.Camera>
+                <PerspectiveCamera FieldOfView="60"
+                                   Position="-0.5,2,3"
+                                   LookDirection="0.5,-2,-3"
+                                   UpDirection="0,1,0" />
+            </Viewport3D.Camera>
+
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <Model3DGroup>
+                        <AmbientLight Color="White" />
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="-0.625,0.5,0 0.625,0.5,0 0.625,-0.5,0 -0.625,-0.5,0."
+                                                TriangleIndices="0,3,2 0,2,1"
+                                                TextureCoordinates="0,0 1,0 1,1 0,1"
+                                                Normals="0,0,1 0,0,1 0,0,1 0,0,1" />
+                            </GeometryModel3D.Geometry>
+
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="IndianRed" />
+                            </GeometryModel3D.Material>
+
+                        </GeometryModel3D>
+                    </Model3DGroup>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </Viewport3D>
+    </Grid>
+</UserControl>

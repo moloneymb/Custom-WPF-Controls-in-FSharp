@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Chapters.Chapter02.SectorShapeExample"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:a="clr-namespace:Chapters"
+             xmlns:xgn="clr-namespace:XamlGeneratedNamespace"
+			 xmlns:Chapter02="clr-namespace:FSharp.Chapter2;assembly=FSharpLibrary">
+	<Grid >
+		<Chapter02:SectorShape Fill="Cornsilk"
+							   Stroke="DarkBlue"
+							   Stretch="Fill"
+							   Margin="30" />
+	</Grid>
+</UserControl>

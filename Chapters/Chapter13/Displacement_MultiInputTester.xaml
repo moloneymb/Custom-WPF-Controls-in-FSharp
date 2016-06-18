@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Chapters.Chapter13.Displacement_MultiInputTester"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:ShaderLibrary="clr-namespace:FSharp.Chapter13;assembly=FSharpLibrary">
+	<UserControl.Resources>
+		<RadialGradientBrush x:Key="GradientBrush"
+							 GradientOrigin="0.5,0.5"
+							 RadiusX="0.25"
+							 RadiusY="0.25"
+							 Center="0.5,0.5"
+							 SpreadMethod="Repeat">
+			<GradientStop Offset="0"
+						  Color="White" />
+			<GradientStop Offset="0.5"
+						  Color="Black" />
+			<GradientStop Offset="1"
+						  Color="White" />
+		</RadialGradientBrush>
+	</UserControl.Resources>
+	<DockPanel>
+		<GroupBox Header="Effect Controls"
+				  DockPanel.Dock="Left"
+				  Width="150">
+			<StackPanel>
+				<TextBlock Text="Scale-X"
+						   FontWeight="Bold"
+						   Margin="0,0,0,8" />
+				<Slider x:Name="_scaleXSlider"
+						Minimum="0"
+						Maximum="2"
+						SmallChange="0.1"
+						LargeChange="0.1" />
+				<TextBlock Text="Scale-Y"
+						   FontWeight="Bold"
+						   Margin="0,0,0,8" />
+				<Slider x:Name="_scaleYSlider"
+						Minimum="0"
+						Maximum="2"
+						SmallChange="0.1"
+						LargeChange="0.1" />
+			</StackPanel>
+		</GroupBox>
+		<Grid>
+			<Rectangle x:Name="DisplacementVisual"
+					   Fill="{StaticResource GradientBrush}" />
+			<Image Source="/Resources;component/Shared/toucan.jpg"
+				   Stretch="Fill">
+				<Image.Effect>
+					<ShaderLibrary:DisplacementEffect x:Name="Effect"
+													  ScaleX="{Binding Value, ElementName=_scaleXSlider}"
+													  ScaleY="{Binding Value, ElementName=_scaleYSlider}">
+						<ShaderLibrary:DisplacementEffect.Input2>
+							<VisualBrush Visual="{Binding ElementName=DisplacementVisual}" />
+						</ShaderLibrary:DisplacementEffect.Input2>
+					</ShaderLibrary:DisplacementEffect>
+
+				</Image.Effect>
+			</Image>
+		</Grid>
+
+	</DockPanel>
+</UserControl>

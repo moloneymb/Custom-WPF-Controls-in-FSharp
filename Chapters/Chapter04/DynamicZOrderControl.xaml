@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Chapters.Chapter04.DynamicZOrderControl"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:ZOrder="clr-namespace:FSharp.Chapter4;assembly=FSharpLibrary">
+	<DockPanel>
+		<StackPanel Height="30"
+					Orientation="Horizontal">
+			<CheckBox IsChecked="{Binding IsOrderReversed, ElementName=_zOrderControl, Mode=TwoWay}">
+				Reverse Z-Order
+			</CheckBox>
+		</StackPanel>
+
+		<ZOrder:ZOrderControl2 x:Name="_zOrderControl"
+							   IsOrderReversed="False"
+							   Offset="100"
+							   Margin="20">
+			<Button>Child A</Button>
+			<Button>Child B</Button>
+			<Button>Child C</Button>
+			<Button>Child D</Button>
+		</ZOrder:ZOrderControl2>
+	</DockPanel>
+</UserControl>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BookExplorer">
+</Property><Property Name="Solution File" Value="C:\Users\mmoloney\Documents\Visual Studio 10\Projects\BookExplorer\BookExplorer.sln">
+</Property><Property Name="Date" Value="Monday, October 26, 2009">
+</Property><Property Name="Time" Value="22:11 PM">
+</Property></Properties><Event ErrorLevel="0" Project="BookExplorer" Source="Explorer\BookExplorer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BookExplorer" Source="Explorer\BookExplorer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Chapters" Source="Chapters\Chapters.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Chapters" Source="Chapters\Chapters.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Resources" Source="Resources\Resources.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Resources" Source="Resources\Resources.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="BookExplorer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="BookExplorer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BookExplorer" Source="Explorer\BookExplorer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Chapters" Source="Chapters\Chapters.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Resources" Source="Resources\Resources.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

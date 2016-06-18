@@ -1,0 +1,115 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<LinearGradientBrush x:Key="RedBackground"
+						 StartPoint="0,0"
+						 EndPoint="0,1">
+		<GradientStop Offset="0"
+					  Color="#f1b9b0" />
+		<GradientStop Offset="0.25"
+					  Color="#f49c8d" />
+		<GradientStop Offset="0.5"
+					  Color="#e86a55" />
+		<GradientStop Offset="0.5"
+					  Color="#ea2804" />
+		<GradientStop Offset="0.75"
+					  Color="#ff6600" />
+		<GradientStop Offset="1"
+					  Color="#c21b00" />
+	</LinearGradientBrush>
+
+	<SolidColorBrush x:Key="RedStroke"
+					 Color="#bb2d00" />
+	<ControlTemplate x:Key="LabelTemplate"
+					 TargetType="Label">
+		<Border BorderBrush="{StaticResource RedStroke}"
+				BorderThickness="1"
+				Background="White"
+				CornerRadius="15,3,15,3"
+				Padding="1">
+			<Border Background="{StaticResource RedBackground}"
+					CornerRadius="15,3,15,3"
+					Padding="3">
+				<ContentPresenter />
+			</Border>
+		</Border>
+	</ControlTemplate>
+
+	<ControlTemplate x:Key="ButtonTemplate"
+					 TargetType="Button">
+		<Grid>
+			<Border x:Name="Border"
+					Background="{StaticResource RedBackground}"
+					BorderThickness="1"
+					CornerRadius="3"
+					BorderBrush="{StaticResource RedStroke}"
+					RenderTransformOrigin="0.5,0.5" />
+			<ContentPresenter VerticalAlignment="Center"
+							  HorizontalAlignment="Center"
+							  TextElement.Foreground="White" />
+		</Grid>
+
+		<ControlTemplate.Triggers>
+			<Trigger Property="IsPressed"
+					 Value="True">
+				<Setter Property="RenderTransform"
+						TargetName="Border">
+					<Setter.Value>
+						<ScaleTransform ScaleX="1"
+										ScaleY="-1" />
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+			<Trigger Property="IsMouseOver"
+					 Value="True">
+				<Setter Property="BorderBrush"
+						TargetName="Border"
+						Value="#a1bbc8" />
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+	<Style x:Key="LabelSkin"
+		   TargetType="Label">
+		<Setter Property="Foreground"
+				Value="White" />
+		<Setter Property="Template"
+				Value="{StaticResource LabelTemplate}" />
+		<Setter Property="Width"
+				Value="100" />
+		<Setter Property="VerticalAlignment"
+				Value="Top" />
+		<Setter Property="Margin"
+				Value="0,0,8,0" />
+	</Style>
+
+	<Style x:Key="TextBoxSkin"
+		   TargetType="TextBox">
+		<Setter Property="BorderBrush"
+				Value="{StaticResource RedStroke}" />
+		<Setter Property="Foreground"
+				Value="{StaticResource RedStroke}" />
+		<Setter Property="FontSize"
+				Value="13" />
+	</Style>
+
+	<Style x:Key="ButtonSkin"
+		   TargetType="Button">
+		<Setter Property="Template"
+				Value="{StaticResource ButtonTemplate}" />
+		<Setter Property="HorizontalAlignment"
+				Value="Right" />
+	</Style>
+
+	<ImageBrush x:Key="RedPattern"
+				ImageSource="/Resources;component/Chapter10/line11.png"
+				TileMode="Tile"
+				Viewport="0,0,100,100"
+				ViewportUnits="Absolute" />
+
+	<Style x:Key="FormSkin"
+		   TargetType="Border">
+		<Setter Property="Padding"
+				Value="10" />
+		<Setter Property="Background"
+				Value="{StaticResource RedPattern}" />
+	</Style>
+</ResourceDictionary>

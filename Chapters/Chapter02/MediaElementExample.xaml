@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="Chapters.Chapter02.MediaElementExample"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+		<ImageBrush x:Key="StopButton"
+								ImageSource="/Resources;component/Chapter02/player_stop.png" />
+		<ImageBrush x:Key="RewindButton"
+								ImageSource="/Resources;component/Chapter02/player_start.png" />
+		<ImageBrush x:Key="PlayButton"
+								ImageSource="/Resources;component/Chapter02/player_play.png" />
+		<ImageBrush x:Key="PauseButton"
+								ImageSource="/Resources;component/Chapter02/player_pause.png" />
+
+		<ControlTemplate x:Key="ButtonTemplate"
+										 TargetType="Button">
+			<Grid>
+				<Rectangle x:Name="Rect"
+									 Fill="{TemplateBinding Background}" />
+			</Grid>
+		</ControlTemplate>
+
+		<ControlTemplate x:Key="PlayButtonTemplate"
+										 TargetType="ToggleButton">
+			<Grid>
+				<Rectangle x:Name="Rect"
+									 Fill="{StaticResource PlayButton}" />
+			</Grid>
+			<ControlTemplate.Triggers>
+				<Trigger Property="ToggleButton.IsChecked"
+								 Value="True">
+					<Setter Property="Fill"
+									Value="{StaticResource PauseButton}"
+									TargetName="Rect" />
+				</Trigger>
+				<Trigger Property="ToggleButton.IsChecked"
+								 Value="False">
+					<Setter Property="Fill"
+									Value="{StaticResource PlayButton}"
+									TargetName="Rect" />
+				</Trigger>
+			</ControlTemplate.Triggers>
+		</ControlTemplate>
+	</UserControl.Resources>
+	<UserControl.CommandBindings>
+		<CommandBinding Command="MediaCommands.TogglePlayPause"
+										CanExecute="CanExecute"
+										Executed="PlayPause" />
+		<CommandBinding Command="MediaCommands.Stop"
+										CanExecute="CanExecute"
+										Executed="Stop" />
+		<CommandBinding Command="MediaCommands.Rewind"
+										CanExecute="CanExecute"
+										Executed="Stop" />
+	</UserControl.CommandBindings>
+	<DockPanel>
+		<Grid DockPanel.Dock="Bottom">
+			<Border Width="180"
+							Height="24"
+							Background="LightGray"
+							BorderBrush="DarkGray"
+							BorderThickness="1"
+							CornerRadius="12"
+							SnapsToDevicePixels="False" />
+			<StackPanel Orientation="Horizontal"
+									HorizontalAlignment="Center">
+				<Button Command="MediaCommands.Rewind"
+								Template="{StaticResource ButtonTemplate}"
+								Background="{StaticResource RewindButton}"
+								Width="32"
+								Height="32">Rewind</Button>
+				<ToggleButton x:Name="_playBtn"
+											Command="MediaCommands.TogglePlayPause"
+											Template="{StaticResource PlayButtonTemplate}"
+											Width="48"
+											Height="48"
+											Margin="10,0,10,0"
+											FocusVisualStyle="{x:Null}" />
+				<Button Command="MediaCommands.Stop"
+								Template="{StaticResource ButtonTemplate}"
+								Background="{StaticResource StopButton}"
+								Width="32"
+								Height="32">Stop</Button>
+			</StackPanel>
+		</Grid>
+		<MediaElement x:Name="_mediaElt"
+									Source="/Resources;component/Chapter02/player_pause.png/Bear.wmv"
+									LoadedBehavior="Manual" />
+	</DockPanel>
+</UserControl>

@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Chapters.Chapter14.ClassHandlerExample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DockPanel>
+
+        <StackPanel DockPanel.Dock="Top">
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+            <Button>Four</Button>
+        </StackPanel>
+        <TextBox x:Name="ConsoleText"
+                 AcceptsReturn="True" 
+                 Height="200"/>
+    </DockPanel>
+</UserControl>

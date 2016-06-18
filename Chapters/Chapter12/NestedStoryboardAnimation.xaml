@@ -1,0 +1,124 @@
+﻿<UserControl x:Class="Chapters.Chapter12.NestedStoryboardAnimation"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+
+		<Storyboard x:Key="NestedAnimation"
+								FillBehavior="Stop">
+			<ParallelTimeline>
+				<DoubleAnimation To="1"
+												 From="0"
+												 Duration="0:0:1"
+												 Storyboard.TargetName="_violetRect"
+												 Storyboard.TargetProperty="Opacity" />
+				<DoubleAnimation To="1"
+												 From="0"
+												 Duration="0:0:1"
+												 BeginTime="0:0:1"
+												 Storyboard.TargetName="_indigoRect"
+												 Storyboard.TargetProperty="Opacity" />
+				<DoubleAnimation To="1"
+												 From="0"
+												 Duration="0:0:1"
+												 BeginTime="0:0:2"
+												 Storyboard.TargetName="_blueRect"
+												 Storyboard.TargetProperty="Opacity" />
+				<DoubleAnimation To="1"
+												 From="0"
+												 Duration="0:0:1"
+												 BeginTime="0:0:3"
+												 Storyboard.TargetName="_greenRect"
+												 Storyboard.TargetProperty="Opacity" />
+				<DoubleAnimation To="1"
+												 From="0"
+												 Duration="0:0:1"
+												 BeginTime="0:0:4"
+												 Storyboard.TargetName="_yellowRect"
+												 Storyboard.TargetProperty="Opacity" />
+				<DoubleAnimation To="1"
+												 From="0"
+												 Duration="0:0:1"
+												 BeginTime="0:0:5"
+												 Storyboard.TargetName="_orangeRect"
+												 Storyboard.TargetProperty="Opacity" />
+				<DoubleAnimation To="1"
+												 From="0"
+												 Duration="0:0:1"
+												 BeginTime="0:0:6"
+												 Storyboard.TargetName="_redRect"
+												 Storyboard.TargetProperty="Opacity" />
+			</ParallelTimeline>
+			<ColorAnimationUsingKeyFrames Duration="0:0:7"
+																		Storyboard.TargetName="NestedStoryboardEllipse"
+																		Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)">
+				<LinearColorKeyFrame KeyTime="0:0:0"
+														 Value="White" />
+				<LinearColorKeyFrame KeyTime="0:0:1"
+														 Value="Violet" />
+				<LinearColorKeyFrame KeyTime="0:0:2"
+														 Value="Indigo" />
+				<LinearColorKeyFrame KeyTime="0:0:3"
+														 Value="Blue" />
+				<LinearColorKeyFrame KeyTime="0:0:4"
+														 Value="Green" />
+				<LinearColorKeyFrame KeyTime="0:0:5"
+														 Value="Yellow" />
+				<LinearColorKeyFrame KeyTime="0:0:6"
+														 Value="Orange" />
+				<LinearColorKeyFrame KeyTime="0:0:7"
+														 Value="Red" />
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+	<DockPanel>
+		<StackPanel Orientation="Horizontal"
+								DockPanel.Dock="Top"
+								HorizontalAlignment="Right">
+			<Button x:Name="_nestedAnimation">Play Animation</Button>
+		</StackPanel>
+		<Border BorderBrush="Gray"
+						BorderThickness="1"
+						CornerRadius="5"
+						DockPanel.Dock="Top"
+						Margin="10"
+						Padding="1">
+
+			<UniformGrid Rows="1"
+									 Height="10">
+				<Border x:Name="_violetRect"
+								Background="Violet"
+								Opacity="0.1"
+								CornerRadius="5,0,0,5" />
+				<Border x:Name="_indigoRect"
+								Background="Indigo"
+								Opacity="0.1" />
+				<Border x:Name="_blueRect"
+								Background="Blue"
+								Opacity="0.1" />
+				<Border x:Name="_greenRect"
+								Background="Green"
+								Opacity="0.1" />
+				<Border x:Name="_yellowRect"
+								Background="Yellow"
+								Opacity="0.1" />
+				<Border x:Name="_orangeRect"
+								Background="Orange"
+								Opacity="0.1" />
+				<Border x:Name="_redRect"
+								Background="Red"
+								Opacity="0.1"
+								CornerRadius="0,5,5,0" />
+			</UniformGrid>
+		</Border>
+		<Ellipse x:Name="NestedStoryboardEllipse"
+						 Fill="LightGray"
+						 Stroke="Gray" />
+	</DockPanel>
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="Button.Click"
+									SourceName="_nestedAnimation">
+			<BeginStoryboard Storyboard="{StaticResource NestedAnimation}" />
+		</EventTrigger>
+	</UserControl.Triggers>
+
+</UserControl>

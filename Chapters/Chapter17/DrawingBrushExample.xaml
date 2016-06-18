@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Chapters.Chapter17.DrawingBrushExample"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+		<DrawingBrush x:Key="WordSwirlBrush"
+					  Viewbox="0,0,624,444"
+					  ViewboxUnits="Absolute">
+			<DrawingBrush.Drawing>
+				<DrawingGroup>
+					<GeometryDrawing Geometry="M0,480L640,480 640,0 0,0z">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush EndPoint="0.5,0"
+												 StartPoint="0.5,1">
+								<GradientStop Color="#FF000000"
+											  Offset="0" />
+								<GradientStop Color="#FF656565"
+											  Offset="1" />
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF7D7D7D"
+									 Geometry="M321.09099,16.429 C354.92299,9.3469997 388.46199,3.8959999 421.33499,1.4242829E-11 L-5.0590639E-12,1.4242829E-11 -5.0590639E-12,146.941 C75.818998,91.880997 188.428,44.199999 321.09099,16.429" />
+					<GeometryDrawing Brush="#FF636363"
+									 Geometry="M314.52999,16.092999 C347.67099,9.1559997 380.52399,3.8159999 412.72699,-5.0413008E-12 L-5.0022209E-12,-5.0413008E-12 -5.0022209E-12,143.93799 C74.269999,90.003997 184.578,43.295998 314.52999,16.092999" />
+					<DrawingGroup>
+						<DrawingGroup.Transform>
+							<MatrixTransform Matrix="1,0,0,1,2.8421709430404E-14,0" />
+						</DrawingGroup.Transform>
+						<GeometryDrawing Brush="#FF7D7D7D"
+										 Geometry="M358.671,12.268 C396.463,6.9799998 433.928,2.9089999 470.649,-1.0089707E-11 L-2.5011104E-12,-1.0089707E-11 -2.5011104E-12,109.723 C84.692001,68.608998 210.482,33.003999 358.671,12.268" />
+					</DrawingGroup>
+				</DrawingGroup>
+			</DrawingBrush.Drawing>
+		</DrawingBrush>
+	</UserControl.Resources>
+	<Grid Background="{StaticResource WordSwirlBrush}">
+		
+	</Grid>
+</UserControl>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Book Title="WPF Control Development Unleashed"
+	  SubTitle="Building Advanced User Experiences"
+	  Publisher="Sams"
+	  Author1="Pavan Podila"
+	  Author2="Kevin Hoffman">
+
+	<Chapter Title="Introduction"
+			 Order="0"
+			 MetaFile="Introduction.xaml"/>
+
+	<Chapter Title="The Design Philosophy of WPF"
+			 Order="1"/>
+
+	<Chapter Title="Diverse Class Structure"
+			 Order="2">
+		<Item Title="VisualContainer"
+			  File="VisualContainerExample.xaml">
+			<Description>Shows a simple example of a container element that can be inserted into the logical tree.</Description>
+
+		</Item>
+		<Item Title="SectorShape"
+			  File="SectorShapeExample.xaml">
+			<Description>Example of creating a custom Shape</Description>
+		</Item>
+		<Item Title="MediaElement"
+			  File="MediaElementExample.xaml">
+			<Description>Using the MediaElement class</Description>
+		</Item>
+		<Item Title="InkCanvas"
+			  File="InkCanvasExample.xaml">
+			<Description>Example showing usage of the InkCanvas class</Description>
+		</Item>
+	</Chapter>
+
+	<Chapter Title="Getting Started With Custom Controls"
+			 Order="3">
+		<Item Title="Circular Minute Timer"
+			  File="CircularMinuteTimer.xaml">
+			<Description>A ProgressBar styled to look like a Circular Minute timer with a repeating animation</Description>
+		</Item>
+		<Item Title="ProgressBar as Process Stages"
+			  File="ProgressBarAsProcessStages.xaml">
+			<Description>A ProgressBar styled to look like a 5-stage indicator</Description>
+
+		</Item>
+	</Chapter>
+
+	<Chapter Title="Building Custom Panels"
+			 Order="4">
+		<Item Title="ZOrderControl"
+					File="BasicZOrderControl.xaml">
+			<Description>A basic ZOrderControl that reverses the visual order of its children.</Description>
+		</Item>
+		<Item Title="Dynamic ZOrderControl"
+					File="DynamicZOrderControl.xaml">
+			<Description>A ZOrderControl that can dynamically reverse the visual order of its children.</Description>
+		</Item>
+		<Item Title="WeightedPanel"
+			  File="WeightedPanelTest.xaml">
+			<Description>WeightedPanel sizes the children based on their attached Weight property. The weights are normalized and the children are sized according to their relative weights.
+			</Description>
+
+		</Item>
+		<Item Title="VanishingPointPanel"
+			  File="VanishingPointPanelTest.xaml">
+			<Description>The VanishingPointPanel makes the children reduce in size as they get closer to the vanishing point</Description>
+		</Item>
+		<Item Title="EllipticalPanel"
+			  File="EllipticalPanelTest.xaml">
+			<Description>The EllipticalPanel with the option to switch between Ferris-Wheel and Non-Ferris-Wheel configurations</Description>
+		</Item>
+		<Item Title="WPF Panels"
+			  File="WPFPanels.xaml">
+			<Description>Shows some standard WPF Panel classes</Description>
+
+		</Item>
+		<Item Title="RenderTransfrom + LayoutTransform"
+			  File="TransformsExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Using Existing Controls"
+			 Order="5">
+		<Item Title="ListBox Customization"
+					File="ListBoxCustomization.xaml"/>
+		<Item Title="Styling a ScrollBar"
+			  File="ScrollBarExample.xaml"/>
+		<Item Title="Slider as Guage (BONUS)"
+			  File="GuageSliderExample.xaml"/>
+		<Item Title="Animated TabControl (BONUS)"
+			  File="AnimatedTabControl.xaml"/>
+		<Item Title="Radar Screen"
+			  File="RadarExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Attached Properties"
+			 Order="6">
+		<Item Title="HoverInteractor"
+			  File="HoverInteractorExample.xaml"/>
+		<Item Title="Drag and Drop"
+			  File="CanvasExample/DragCanvasExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="IScrollInfo"
+			 Order="7">
+		<Item Title="RowsPanel, with IScrollInfo"
+			  File="RowsPanelTester.xaml"/>
+		<Item Title="Scrolling without ScrollViewer"
+			  File="ScrollingExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Virtualization"
+			 Order="8">
+		<Item Title="StaggeredPanel - Virtualized"
+			  File="StaggeredPanelTester.xaml"/>
+		<Item Title="Overlaying 2D rects on 3D objects"
+			  File="OverlayRectsOn3DObjects.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Advanced Controls and Visual Effects"
+			 Order="9">
+		<Item Title="Dock Slide Control"
+			  File="DockSlideTester.xaml"/>
+		<Item Title="Window Sill Parallax (BONUS)"
+			  File="WindowSill.xaml"/>
+		<Item Title="MapView Parallax (BONUS)"
+			  File="MapView.xaml"/>
+		<Item Title="Magnifying Glass (BONUS)"
+			  File="MagnifyingGlassExample.xaml"/>
+		<Item Title="Lasso Selection"
+			  File="LassoSelectionExample.xaml"/>
+		<Item Title="TransitionContainer"
+			  File="Transition/TransitionTester.xaml"/>
+		<Item Title="Sample Web2.0 Effects"
+			  File="DifferentEffects.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Skins and Themes"
+			 Order="10">
+		<Item Title="ComponentResourceKey"
+					File="ResourceKeyTester.xaml">
+			<Description>Shows the use of ComponentResourceKey and DynamicResource. You can change the ThemeInfoAttribute in AssemblyInfo.cs to see a change in the style for the SkinThemeControl.</Description>
+
+		</Item>
+		<Item Title="Runtime Skinning"
+			  File="RuntimeSkinning.xaml"/>
+		<Item Title="Custom Chrome Window"
+			  File="CustomWindowTester.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Bridging 2D and 3D"
+			 Order="11">
+		<Item Title="Simple 3D World"
+			  File="Simple3DWorld.xaml"/>
+		<Item Title="View3DElement"
+			  File="View3DElementExample.xaml"/>
+		<Item Title="GardenViewPanel3D"
+			  File="GardenViewPanel3DExample.xaml"/>
+		<Item Title="Interactive GardenViewPanel3D"
+			  File="InteractiveGardenViewPanel3DExample.xaml"/>
+		<Item Title="Viewport2DVisual3D Example"
+			  File="Viewport2DVisual3DExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Custom Animations"
+			 Order="12">
+		<Item Title="CompositionTarget"
+			  File="FallingObjects.xaml"/>
+		<Item Title="From/To Animation"
+			  File="FromToAnimation.xaml"/>
+		<Item Title="KeyFrame Animation"
+			  File="KeyFrameAnimation.xaml"/>
+		<Item Title="Path Animation"
+			  File="PathAnimationExample.xaml"/>
+		<Item Title="Nested Storyboard Animation"
+			  File="NestedStoryboardAnimation.xaml"/>
+		<Item Title="Custom Animation"
+			  File="MeshMorphAnimationExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Pixel Shaders"
+			 Order="13">
+		<Item Title="Grayscale Effect"
+			  File="GrayscaleEffect_Tester.xaml"/>
+		<Item Title="Twirl Effect"
+			  File="TwirlEffect_Tester.xaml"/>
+		<Item Title="Effect Mapping for SqueezeEffect"
+			  File="EffectMappingExample.xaml">
+			<Description>
+				<![CDATA[
+				This example shows that the Mouse events (Hover and Clicks) only work inside the Squeezed region. 
+				This is because of the EffectMapping that has been setup on the SqueezeEffect.
+				]]>
+			</Description>
+		</Item>
+		<Item Title="Displacement Effect (Multi-Input)"
+			  File="Displacement_MultiInputTester.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Events, Focus, Commands"
+			 Order="14">
+		<Item Title="Simple Command Example"
+					File="SimpleCommandingExample.xaml"/>
+		<Item Title="Attached Events"
+			  File="AttachedEventTester.xaml"/>
+		<Item Title="Class Handlers"
+					File="ClassHandlerExample.xaml"/>
+		<Item Title="Weak Events"
+			  File="WeakEventTester.xaml"/>
+		<Item Title="Command Source"
+			  File="CommandSourceTester.xaml"/>
+		<Item Title="Keyboard Navigation"
+			  File="KeyboardNavigationExample.xaml"/>
+		<Item Title="TextBox Watermark"
+					File="TextBoxHelperExample.xaml"/>
+		<Item Title="FocusVisualStyle example"
+					File="FocusVisualStyleExample.xaml">
+			<Description>Use the TAB key to see the default and custom FocusVisualStyle</Description>
+		</Item>
+	</Chapter>
+
+	<Chapter Title="Performance"
+					 Order="15">
+		<Item Title="RenderTargetBitmap Example"
+					File="RenderTargetBitmapExample.xaml"/>
+
+	</Chapter>
+
+	<Chapter Title="Advanced DataBinding"
+			 Order="16">
+		<Item Title="Binding - NotifyOnTargetUpdate"
+					File="NotifySourceTargetExample.xaml">
+			<Description>The ItemsSource Binding has NotifyOnTargetUpdated=True. When the ItemsSource changes (every 3 seconds), you will see new items</Description>
+		</Item>
+		<Item Title="RelativeSource PreviousData"
+					File="RelSourceExample.xaml">
+			<Description>A line chart using RelativeSource.PreviousData</Description>
+		</Item>
+		<Item Title="Cross-Thread Databinding"
+			  File="CrossThreadDataBindingExample.xaml"/>
+		<Item Title="Using BackgroundWorker"
+			  File="BackgroundWorkerExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Design Tips and Techniques"
+			 Order="17">
+		<Item Title="GradientBrush Extension"
+					File="MarkupExtensionExample.xaml">
+			<Description>A MarkupExtension for creating linear gradients</Description>
+		</Item>
+		<Item Title="DrawingBrush Example (Word 2007 Swirl)"
+					File="DrawingBrushExample.xaml"/>
+		<Item Title="LinearGradientBrush - RelativeTransform"
+					File="GradientBrushRelativeTransformExample.xaml">
+			<Description>A progress animation using RelativeTransform on a LinearGradientBrush</Description>
+		</Item>
+		<Item Title="ClipGeometry animation"
+					File="ClipAnimationExample.xaml"/>
+		<Item Title="OpacityMask and Clip"
+			  File="OpacityMaskAndClip.xaml"/>
+		<Item Title="Webdings Font For Icons"
+			  File="WebdingsFontForIconsExample.xaml"/>
+	</Chapter>
+
+	<Chapter Title="Automation"
+			 Order="18">
+		<Item Title="Range Selector Control"
+			  File="RangeSelectorAutomationExample.xaml"/>
+		<Item Title="Automation Client APIs"
+			  File="AutomationClientAPIExample.xaml"/>
+	</Chapter>
+	</Book>

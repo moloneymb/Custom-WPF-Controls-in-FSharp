@@ -1,0 +1,35 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Chapters.ClipAnimationExample"
+             x:Name="UserControl">
+    <Grid Width="400"
+          Height="200">
+        <Path Stretch="Fill"
+              Stroke="#FF000000"
+              Data="M125,207 C138.44886,207 147.60709,210.25003 159,203 174.39332,193.20425 163.45714,185.09285 186,202 190.96352,205.72264 187.26771,213.91536 196,203 200.4998,197.37525 198.61039,190.40559 209,196 228.27092,206.37665 213.29623,208.70377 234,188 239.05209,193.05209 242,206.72788 242,215 245.86032,209.8529 244.56681,205.57178 252,205 260.84815,204.31937 260.50858,200.10191&#xd;&#xa;266,212 268.05653,216.45582 266.90929,221.66652 276,215 279.40037,212.5064 281.81893,208.09463 284,219 293.09107,222.03036 295.49576,211.74788 304,216 310.93796,219.46898 322.62612,215.75074 329,220 333.19255,222.79503 329.97704,230.40897 333,232 334.91785,233.00939 335.32557,229.50233 337,229 339.92457,228.12263 343.86855,229 347,229 354.67657,229&#xd;&#xa;373.00576,221.03456 375,233 399.15241,233 400.94198,219.94198 423,242 427.06008,236.58656 425,231.26262 425,224 425,242.09143 431,259.89144 431,278 431,242.015 420.41503,195.75492 432,161 449.89521,178.89521 461.74977,218.74885 467,245 467,244 467,243 467,242 467,241.33333 467,240.66667 467,240&#xd;&#xa;467,244 467,248 467,252 473.40762,239.18476 467.32981,245 486,245 494.33333,245 502.66667,245 511,245 511,247.66667 511,250.33333 511,253 515.68677,250.18794 519.65275,246.18406 523,242 523,242.66667 523,243.33333 523,244"
+              StrokeThickness="2" />
+
+        <Grid.Clip>
+            <RectangleGeometry x:Name="ClipRect"
+                               Rect="0,0,0,200" />
+        </Grid.Clip>
+    </Grid>
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever"
+                            AutoReverse="True">
+                    <RectAnimation From="0,0,0,200"
+                                   To="0,0,400,200"
+                                   Duration="0:0:1"
+                                   Storyboard.TargetName="ClipRect"
+                                   Storyboard.TargetProperty="Rect" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+</UserControl>

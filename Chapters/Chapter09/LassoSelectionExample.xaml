@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Chapters.Chapter09.LassoSelectionExample"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:Resources1="clr-namespace:Chapters.Resources;assembly=Resources">
+	<UserControl.Resources>
+		<Resources1:StringCollection x:Key="DataSource" />
+
+		<LinearGradientBrush x:Key="NormalBrush"
+							 StartPoint="0,0"
+							 EndPoint="0,1">
+			<GradientStop Offset="0"
+						  Color="#edffe8" />
+			<GradientStop Offset="1"
+						  Color="#c5dbbf" />
+		</LinearGradientBrush>
+		
+		<DataTemplate x:Key="TextTemplate">
+			<Border BorderThickness="1"
+					BorderBrush="Gray"
+					CornerRadius="3"
+					Background="{StaticResource NormalBrush}"
+					Height="100"
+					Margin="20">
+				<TextBlock Text="{Binding}"
+						   FontSize="18"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center" />
+			</Border>
+		</DataTemplate>
+	</UserControl.Resources>
+
+	<DockPanel>
+		<CheckBox x:Name="LassoCheckBox" DockPanel.Dock="Top" Click="ToggleSelection" Margin="10" Content="Toggle Lasso Selection"/>
+		<Grid>
+			<ListBox x:Name="ItemsListBox"
+					 SelectionMode="Multiple"
+					 HorizontalContentAlignment="Stretch"
+					 ItemsSource="{StaticResource DataSource}"
+					 ItemTemplate="{StaticResource TextTemplate}"
+					 ScrollViewer.CanContentScroll="False">
+			</ListBox>
+			<InkCanvas x:Name="OverlayInkCanvas"
+					   StrokeCollected="OnStrokeCollection"
+					   Background="Transparent"
+					   Visibility="Hidden"
+					   Focusable="False" />
+		</Grid>
+	</DockPanel>
+</UserControl>

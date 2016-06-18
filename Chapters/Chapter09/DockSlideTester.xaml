@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Chapters.Chapter09.DockSlideTester"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:SlideView="clr-namespace:FSharp.Chapter9;assembly=FSharpLibrary"
+			 Width="640"
+			 Height="480">
+	<DockPanel>
+		<CheckBox DockPanel.Dock="Bottom"
+				  IsChecked="{Binding Path=IsChildDocked, ElementName=_presenter}">
+			Show Drinks Menu
+		</CheckBox>
+		<SlideView:DockSlidePresenter x:Name="_presenter">
+			<SlideView:DockSlidePresenter.FrontChild>
+				<Border BorderBrush="DarkRed"
+						BorderThickness="2">
+					<Image Source="/Resources;component/Chapter09/LunchMenu.jpg"
+						   Stretch="Fill" />
+				</Border>
+			</SlideView:DockSlidePresenter.FrontChild>
+			<SlideView:DockSlidePresenter.BackChild>
+				<Border BorderBrush="DarkBlue"
+						BorderThickness="2">
+					<Image Source="/Resources;component/Chapter09/DrinksMenu.jpg"
+						   Stretch="Fill" />
+				</Border>
+			</SlideView:DockSlidePresenter.BackChild>
+		</SlideView:DockSlidePresenter>
+	</DockPanel>
+</UserControl>

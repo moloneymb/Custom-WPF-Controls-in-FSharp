@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Chapters.Chapter16.DPExample"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+		<Storyboard x:Key="WidthAnimator">
+			<DoubleAnimation From="0"
+							 To="400"
+							 Duration="0:0:1"
+							 Storyboard.TargetName="Rect"
+							 Storyboard.TargetProperty="Width"/>
+		</Storyboard>
+	</UserControl.Resources>
+	<Grid>
+		<Rectangle x:Name="Rect"
+				   Fill="Red"
+				   Width="100"
+				   Height="100"
+				   Stroke="IndianRed"
+				   StrokeThickness="1" />
+	</Grid>
+	
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="UserControl.Loaded">
+			<BeginStoryboard Storyboard="{StaticResource WidthAnimator}" />
+		</EventTrigger>
+	</UserControl.Triggers>
+</UserControl>
